@@ -9,6 +9,9 @@ function getValues() {
     var BMI = calculateBmi(weight, height);
     console.log("Your BMI: " + BMI);
     addElement(weight, height, BMI);
+
+    document.getElementById('weight').value = "";
+    document.getElementById('height').value = "";
 }
 
 /**
@@ -26,12 +29,16 @@ function addElement(weight, height, BMI){
     var row = document.createElement('div');
     row.className = 'row';
 
-    row.innerHTML = `<div id="display-details" class="col s12">
-                        <h5>Your Details:</h5>
-                        <p id="bmi-details">Your Height: ${height}</p>
-                        <p id="bmi-details">Your Weight: ${weight}</p>
-                        <p id="bmi-details">Your BMI: ${BMI}</p>
-                    </div><!--CLOSE COLUMN-->`;
+    row.innerHTML = `<div id="display-details" class="col s12 m12">
+                        <div class="card blue-grey lighten-5">
+                            <div class="card-content">
+                                <span class="card-title"><b>Your Details:</b><hr></span>
+                                <p id="bmi-details">Your Height: <b>${height}</b></p>
+                                <p id="bmi-details">Your Weight: <b>${weight}</b></p>
+                                <p id="bmi-details">Your BMI: <b>${BMI}</b></p>
+                            </div>
+                        </div>
+                    </div>`;
 
     document.getElementById('main-container').appendChild(row);
 }
