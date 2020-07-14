@@ -4,7 +4,7 @@
 function getValues() {
     var weight = document.getElementById('weight').value;
     var height = document.getElementById('height').value;
-    console.log(weight + " ||| " + height);
+    console.log("Your height: " + height + " meter" + "\nYour Weight: " + weight + " kg");
     
     calculateBmi(weight, height);
 }
