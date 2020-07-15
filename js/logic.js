@@ -48,7 +48,7 @@ function addElement(weight, height, bmiResult){
                         <div class="card blue-grey lighten-5">
                             <div class="card-content">
                                 <span class="card-title"><b>Your Details:</b><hr></span>
-                                <p id="bmi-details" class="right"><b>${bmiResult[0]}</b></p>
+                                <p id="bmi-details" class="right"><b>${bmiResult[1]}</b></p>
                                 <p id="bmi-details">Your Height: <b>${height}</b></p>
                                 <p id="bmi-details">Your Weight: <b>${weight}</b></p>
                                 <p id="bmi-details">Your BMI: <b>${bmiResult[0]}</b></p>
