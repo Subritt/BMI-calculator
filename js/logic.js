@@ -43,7 +43,10 @@ function checkRange(BMI) {
 function addElement(weight, height, bmiResult){
 
     if (weight == "" || height == "") {
-        document.getElementById('card-view').remove();
+        if (document.getElementById('card-view')) {
+            document.getElementById('card-view').remove();
+            return;
+        }
         return;
     }
 
