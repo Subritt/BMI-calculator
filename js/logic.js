@@ -41,8 +41,15 @@ function checkRange(BMI) {
  * function to create dynamic emelent
  */
 function addElement(weight, height, bmiResult){
+
+    if (weight == "" || height == "") {
+        document.getElementById('card-view').remove();
+        return;
+    }
+
     var row = document.createElement('div');
     row.className = 'row';
+    row.id = 'card-view';
 
     row.innerHTML = `<div id="display-details" class="col s12 m12">
                         <div class="card blue-grey lighten-5">
